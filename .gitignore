@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 .vscode
-
+deepseek/homework/milvus_docs/*
 # C extensions
 *.so
 
