@@ -49,9 +49,9 @@ sudo systemctl restart docker
 
 ```bash
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
-  -v open-webui:/app/backend/data \
+  -v /home/docker/open-webui/data:/app/backend/data \
   --name open-webui \
-  --restart always \
+  --restart unless-stopped \
   ghcr.io/open-webui/open-webui:main
 ```
 
@@ -118,7 +118,7 @@ docker run -d -p 3000:8080 \
   -v ollama:/root/.ollama \
   -v open-webui:/app/backend/data \
   --name open-webui \
-  --restart always \
+  --restart unless-stopped \
   ghcr.io/open-webui/open-webui:ollama
 ```
 
